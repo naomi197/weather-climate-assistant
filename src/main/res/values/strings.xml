@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">دستیار اقلیم شناس</string>
-    <string name="weather_title">وضعیت هوا</string>
-    <string name="forecast_title">پیش‌بینی</string>
-    <string name="air_quality_title">کیفیت هوا</string>
-    <string name="refresh">به‌روزرسانی</string>
-    <string name="temperature">درجه حرارت</string>
-    <string name="humidity">رطوبت</string>
-    <string name="wind_speed">سرعت باد</string>
-    <string name="pressure">فشار هوا</string>
+    <string name="app_name">Climate Assistant</string>
+    <string name="weather_title">Current Weather</string>
+    <string name="forecast_title">Forecast</string>
+    <string name="air_quality_title">Air Quality</string>
+    <string name="refresh">Refresh</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="pressure">Pressure</string>
 </resources>

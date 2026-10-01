@@ -1,96 +1,58 @@
-# دستیار اقلیم شناس و هواشناسی
+# Climate Assistant
 
-## Weather & Climate Assistant - Android Application
+## Android Weather & Climate Application
 
-یک اپلیکیشن اندرویدی جامع برای دریافت اطلاعات روزانه هواشناسی و اقلیم شناسی از منابع رسمی.
+Climate Assistant is an English-language Android application for checking daily weather, air-quality, and climate-related figures with transparent data-source attribution.
 
-### ✨ ویژگی‌ها
+### Features
 
-- 📍 **موقعیت‌یابی هوشمند**: دریافت خودکار موقعیت جغرافیایی
-- 🌡️ **اطلاعات آب‌وهوایی**: درجه حرارت، رطوبت، سرعت باد و فشار هوا
-- 📅 **پیش‌بینی 5 روزه**: اطلاعات هواشناسی برای روزهای آینده
-- 💨 **شاخص کیفیت هوا**: PM2.5، PM10 و دیگر آلاینده‌های هوا
-- 🔗 **منابع رسمی**: تمام اطلاعات از API‌های معتبر
-- 🌐 **رابط کاربری پرتو**: طراحی مدرن و واکنش‌پذیر
+- Current temperature, humidity, wind speed, and atmospheric pressure
+- Five-day weather forecast
+- Air-quality data including PM2.5, PM10, and AQI
+- Location-aware weather retrieval (planned in the next implementation step)
+- Official data-source attribution
+- English user interface
+- Jetpack Compose and Material 3 design
 
-### 📡 منابع اطلاعات
+### Data Sources
 
-1. **OpenWeather API**
-   - پیش‌بینی هوا و اطلاعات فعلی
-   - شاخص کیفیت هوا
-   - https://openweathermap.org/
+1. **OpenWeather API** — current weather, forecasts, and air pollution data: https://openweathermap.org/
+2. **NOAA** — official US weather and climate data: https://www.noaa.gov/
+3. **Copernicus Climate Data Store** — global climate datasets: https://cds.climate.copernicus.eu/
 
-2. **NOAA (National Oceanic and Atmospheric Administration)**
-   - داده‌های آب‌وهوایی آمریکا
-   - https://www.noaa.gov/
+> The current network implementation uses OpenWeather endpoints. NOAA and Copernicus are listed as planned source integrations and should only be displayed as active sources after their APIs are connected.
 
-3. **Copernicus Climate Data Store**
-   - داده‌های اقلیمی جهانی
-   - https://cds.climate.copernicus.eu/
+### Technology
 
-### 🛠️ تکنولوژی‌ها
+- Kotlin
+- Jetpack Compose
+- Material Design 3
+- Retrofit and OkHttp
+- Kotlin Coroutines
+- Room and DataStore dependencies
 
-- **Kotlin**: زبان برنامه‌نویسی
-- **Jetpack Compose**: UI toolkit مدرن
-- **Retrofit**: HTTP client
-- **Room**: پایگاه داده محلی
-- **Coroutines**: برنامه‌نویسی غیرهمگام
-- **Material Design 3**: طراحی UI
+### Setup
 
-### 📋 نیازمندی‌ها
+1. Clone the repository:
 
-- Android SDK 26 یا بالاتر
-- OpenWeather API Key
-- اینترنت فعال
-- دسترسی به موقعیت‌یابی (GPS)
-
-### 🚀 شروع کار
-
-1. **Clone Repository**
 ```bash
 git clone https://github.com/naomi197/weather-climate-assistant.git
 cd weather-climate-assistant
 ```
 
-2. **تنظیم API Key**
-   - ثبت‌نام در [OpenWeather](https://openweathermap.org/api)
-   - API Key خود را در `WeatherRepositoryImpl.kt` وارد کنید
+2. Create an OpenWeather API key at https://openweathermap.org/api.
+3. Configure the key securely through a local Gradle property or environment variable. Do not commit API keys to source control.
+4. Open the project in Android Studio and run it on an Android 8.0 (API 26) or newer device.
 
-3. **Build & Run**
-```bash
-./gradlew build
-./gradlew installDebug
+### Project Structure
+
+```text
+src/main/kotlin/com/weatherclimate/assistant/
+├── data/network/       # API interfaces and response models
+├── domain/repository/  # Repository contracts and implementations
+└── ui/                 # Compose activity, screens, and theme
 ```
 
-### 📱 ساختار پروژه
+## License
 
-```
-weather-climate-assistant/
-├── src/main/
-│   ├── kotlin/
-│   │   └── com/weatherclimate/assistant/
-│   │       ├── data/network/       # API و مدل‌های شبکه
-│   │       ├── domain/repository/  # منطق تجاری
-│   │       └── ui/                 # رابط کاربری
-│   └── AndroidManifest.xml
-└── README.md
-```
-
-### 📝 لایسنس
-
-MIT License - برای اطلاعات بیشتر `LICENSE` را ببینید.
-
-### 👨‍💻 نویسندگان
-
-- Naomi197
-
-### 📞 تماس و پشتیبانی
-
-برای سوالات و پیشنهادات:
-- Issues: GitHub Issues
-- Email: support@example.com
-
----
-
-**نسخه**: 1.0.0  
-**آخرین بروزرسانی**: 2026
+MIT License.
