@@ -4,25 +4,22 @@
 
 Climate Assistant is an English-language Android application for checking daily weather, air-quality, and climate-related figures with transparent data-source attribution.
 
-Developer: [alirezafazeli@live.com](mailto:alirezafazeli@live.com)
+Developer: Alireza Sani · [alirezafazeli@live.com](mailto:alirezafazeli@live.com)
 
 ### Features
 
 - Current temperature, humidity, wind speed, and atmospheric pressure
 - Five-day weather forecast
 - Air-quality data including PM2.5, PM10, and AQI
-- Location-aware weather retrieval (planned in the next implementation step)
-- Official data-source attribution
+- Place search, then a refresh of the latest observation
 - English user interface
 - Jetpack Compose and Material 3 design
 
-### Data Sources
+### Data source
 
-1. **OpenWeather API** — current weather, forecasts, and air pollution data: https://openweathermap.org/
-2. **NOAA** — official US weather and climate data: https://www.noaa.gov/
-3. **Copernicus Climate Data Store** — global climate datasets: https://cds.climate.copernicus.eu/
+Open-Meteo provides the current observation, the five-day forecast, and PM2.5, PM10, and US AQI. No API key is required.
 
-> The current network implementation uses OpenWeather endpoints. NOAA and Copernicus are listed as planned source integrations and should only be displayed as active sources after their APIs are connected.
+https://open-meteo.com/
 
 ### Technology
 
@@ -31,7 +28,6 @@ Developer: [alirezafazeli@live.com](mailto:alirezafazeli@live.com)
 - Material Design 3
 - Retrofit and OkHttp
 - Kotlin Coroutines
-- Room and DataStore dependencies
 
 ### Setup
 
@@ -42,15 +38,13 @@ git clone https://github.com/naomi197/weather-climate-assistant.git
 cd weather-climate-assistant
 ```
 
-2. Create an OpenWeather API key at https://openweathermap.org/api.
-3. Configure the key securely through a local Gradle property or environment variable. Do not commit API keys to source control.
-4. Build the debug package:
+2. Build the debug package:
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-5. Open the project in Android Studio and run it on an Android 8.0 (API 26) or newer device.
+3. Open the project in Android Studio and run it on an Android 8.0 (API 26) or newer device. Refresh loads live Open-Meteo data for the place in the text field. Tehran is the starting place.
 
 ### Project Structure
 
