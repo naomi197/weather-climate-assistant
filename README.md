@@ -44,7 +44,13 @@ cd weather-climate-assistant
 
 2. Create an OpenWeather API key at https://openweathermap.org/api.
 3. Configure the key securely through a local Gradle property or environment variable. Do not commit API keys to source control.
-4. Open the project in Android Studio and run it on an Android 8.0 (API 26) or newer device.
+4. Build the debug package:
+
+```bash
+./gradlew assembleDebug
+```
+
+5. Open the project in Android Studio and run it on an Android 8.0 (API 26) or newer device.
 
 ### Project Structure
 
