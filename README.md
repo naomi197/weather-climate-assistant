@@ -4,6 +4,8 @@
 
 Climate Assistant is an English-language Android application for checking daily weather, air-quality, and climate-related figures with transparent data-source attribution.
 
+Developer: [alirezafazeli@live.com](mailto:alirezafazeli@live.com)
+
 ### Features
 
 - Current temperature, humidity, wind speed, and atmospheric pressure
@@ -52,6 +54,12 @@ src/main/kotlin/com/weatherclimate/assistant/
 ├── domain/repository/  # Repository contracts and implementations
 └── ui/                 # Compose activity, screens, and theme
 ```
+
+## Related work
+
+- [ClimaScope](https://github.com/naomi197/climascope) — live climate observatory for Android and the browser
+- [TreeGrow](https://github.com/naomi197/treegrow-android) — Android app for virtual tree planting
+- [CleanFlow Ghana](https://github.com/naomi197/cleanflow-ghana) — water-pollution reporting and priority ranking
 
 ## License
 
